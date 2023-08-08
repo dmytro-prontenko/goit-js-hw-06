@@ -1,8 +1,8 @@
 const rangeControl = document.querySelector("#font-size-control");
 const text = document.querySelector("#text");
 
-rangeControl.addEventListener("change", onChange);
+rangeControl.addEventListener("input", onInput);
 
-function onChange(event) {
+function onInput(event) {
   text.style.fontSize = `${event.currentTarget.value}px`;
 }

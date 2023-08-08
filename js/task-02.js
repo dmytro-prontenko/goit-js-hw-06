@@ -15,14 +15,14 @@ const listOfIngredients = document.querySelector("#ingredients");
 │ =====================================
 */
 
-// const itemsToAppend = ingredients.map((ingredient) => {
-//   const li = document.createElement("li");
-//   li.textContent = ingredient;
-//   li.classList.add("item");
-//   return li;
-// });
+const itemsToAppend = ingredients.map((ingredient) => {
+  const li = document.createElement("li");
+  li.textContent = ingredient;
+  li.classList.add("item");
+  return li;
+});
 
-// listOfIngredients.append(...itemsToAppend);
+listOfIngredients.append(...itemsToAppend);
 
 /*
 │ =======================================================
@@ -42,14 +42,3 @@ const listOfIngredients = document.querySelector("#ingredients");
 // const listToAppend = itemsToAppend(ingredients);
 
 // listOfIngredients.append(...listToAppend);
-
-/*
-│ =====================================
-│      insert all elements at once
-│ =====================================
-*/
-const itemsToInsert = ingredients
-  .map((ingredient) => `<li>${ingredient}</li>`)
-  .join("");
-
-listOfIngredients.insertAdjacentHTML("beforeend", itemsToInsert);
